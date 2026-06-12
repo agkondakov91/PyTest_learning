@@ -1,5 +1,5 @@
 [project]
-name = "pytest"
+name = "pytest-learning"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
@@ -9,6 +9,7 @@ dependencies = []
 [dependency-groups]
 dev = [
     "pre-commit>=4.6.0",
+    "pytest>=9.0.3",
     "ruff>=0.15.17",
 ]
 
@@ -18,3 +19,9 @@ line-length = 88
 [tool.ruff.lint]
 select = ["E", "W", "F", "N", "I"]
 ignore = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_functions = ["test_*"]
+python_classes = ["Test*"]
