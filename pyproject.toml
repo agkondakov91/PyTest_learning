@@ -25,3 +25,8 @@ testpaths = ["tests"]
 python_files = ["test_*.py"]
 python_functions = ["test_*"]
 python_classes = ["Test*"]
+markers = [
+    "fast: быстрые тесты (без внешних зависимостей)",
+    "slow: медленные тесты (база данных, сеть)",
+    "smoke: базовые тесты для проверки работоспособности",
+]
