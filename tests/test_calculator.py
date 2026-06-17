@@ -1,6 +1,6 @@
 import pytest
 
-from lections.L2.src.calculator import add, divide, multiply, subtract
+from lections.L2.calculator import add, divide, multiply, subtract
 
 
 def test_add():
