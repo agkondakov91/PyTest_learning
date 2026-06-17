@@ -1,5 +1,4 @@
 import pytest
-
 from lections.L2.src.calculator import add, divide, subtract
 
 
