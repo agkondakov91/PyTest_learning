@@ -28,6 +28,7 @@ testpaths = ["tests"]
 python_files = ["test_*.py"]
 python_functions = ["test_*"]
 python_classes = ["Test*"]
+DJANGO_SETTINGS_MODULE = "config.settings"
 markers = [
     "fast: быстрые тесты (без внешних зависимостей)",
     "slow: медленные тесты (база данных, сеть)",
