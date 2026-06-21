@@ -12,7 +12,7 @@ dependencies = [
 
 [dependency-groups]
 dev = [
-    "httpx>=0.28.1",
+    "httpx2>=2.4.0",
     "pre-commit>=4.6.0",
     "pytest>=9.0.3",
     "pytest-django>=4.12.0",
