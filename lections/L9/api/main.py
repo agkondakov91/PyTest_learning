@@ -1,5 +1,3 @@
-from fastapi import FastAPI, HTTPException
-
 from api.models import Product, ProductCreate
 from api.storage import (
     create_product,
@@ -7,6 +5,7 @@ from api.storage import (
     get_all_products,
     get_product_by_id,
 )
+from fastapi import FastAPI, HTTPException
 
 app = FastAPI(title="Учебный API магазина")
 
