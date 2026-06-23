@@ -1,9 +1,9 @@
 from unittest.mock import MagicMock, patch
 
-from lections.L7.notifications import notify_user_on_order
+from src.l7_notifications import notify_user_on_order
 
 
-@patch("lections.L7.notifications.send_email")
+@patch("src.l7_notifications.send_email")
 def test_notify_user_on_order(mock_send_email: MagicMock):
     mock_send_email.return_value = True
     result = notify_user_on_order("user@example.com", 42)
@@ -15,14 +15,14 @@ def test_notify_user_on_order(mock_send_email: MagicMock):
 
 
 def test_notify_user_sends_correct_subject():
-    with patch("lections.L7.notifications.send_email") as mock_send_email:
+    with patch("src.l7_notifications.send_email") as mock_send_email:
         mock_send_email.return_value = True
         notify_user_on_order("user@example.com", 99)
         args = mock_send_email.call_args
         assert args[0][1] == "Заказ №99 создан"
 
 
-@patch("lections.L7.notifications.send_email")
+@patch("src.l7_notifications.send_email")
 def test_send_email_called_once(mock_send_email: MagicMock):
     mock_send_email.return_value = True
     notify_user_on_order("user@example.com", 1)

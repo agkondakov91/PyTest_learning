@@ -1,6 +1,6 @@
 import pytest
 
-from lections.L6.cart import Cart
+from src.l6_cart import Cart
 
 
 @pytest.fixture
@@ -62,3 +62,17 @@ def test_full_cart_total(cart_with_accessories):
 
 def test_full_cart_count(cart_with_accessories):
     assert cart_with_accessories.count() == 3
+
+
+def test_negative_price():
+    cart = Cart()
+    item = {"name": "Item1", "price": -10}
+    with pytest.raises(ValueError, match="не может быть отрицательной"):
+        cart.add_item(**item)
+
+
+def test_negative_quantity():
+    cart = Cart()
+    item = {"name": "Item1", "price": 10, "quantity": -42}
+    with pytest.raises(ValueError, match="должно быть больше нуля"):
+        cart.add_item(**item)

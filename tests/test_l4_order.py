@@ -1,6 +1,6 @@
 import pytest
 
-from lections.L4.order import calculate_total
+from src.l4_order import calculate_total
 
 # --- Happy path ---
 

@@ -1,6 +1,6 @@
 import pytest
 
-from lections.L6.cart import Cart
+from src.l6_cart import Cart
 
 
 @pytest.fixture

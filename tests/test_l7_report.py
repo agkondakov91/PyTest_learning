@@ -1,10 +1,10 @@
 from unittest.mock import MagicMock, patch
 
-import lections.L7.report as report_module
-from lections.L7.report import generate_report_title
+import src.l7_report as report_module
+from src.l7_report import generate_report_title
 
 
-@patch("lections.L7.report.get_current_year")
+@patch("src.l7_report.get_current_year")
 def test_generate_report_title(mock_year: MagicMock):
     mock_year.return_value = 2026
     result = generate_report_title("Testing")

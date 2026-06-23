@@ -1,6 +1,6 @@
 import pytest
 
-from lections.L5.discount import apply_discount
+from src.l5_discount import apply_discount
 
 
 @pytest.mark.parametrize(
