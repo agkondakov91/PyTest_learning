@@ -1,6 +1,6 @@
 import pytest
 
-from lections.L2.calculator import add, divide, subtract
+from src.l2_calculator import add, divide, subtract
 
 
 @pytest.mark.skip(reason="Функция ещё не реализована")
