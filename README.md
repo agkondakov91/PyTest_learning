@@ -1,6 +1,6 @@
 # 🧪 Python Testing with pytest — учебный курс
 
-![Tests](https://github.com/agkondakov91/PyTest_learning/actions/workflows/lint.yml/badge.svg)
+![Tests](https://github.com/agkondakov91/PyTest_learning/actions/workflows/tests.yml/badge.svg)
 
 Материалы курса по тестированию Python-кода с помощью pytest. Курс охватывает полный цикл: от понимания зачем писать тесты — до автоматического запуска в CI через GitHub Actions.
 
